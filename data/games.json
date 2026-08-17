@@ -1,0 +1,10 @@
+[
+    {
+        "id": "1",
+        "title": "Super Mario World",
+        "core": "snes",
+        "rom": "roms/snes/smw.zip",
+        "cover": "images/covers/smw.jpg",
+        "description": "Jogo clássico do Super Mario."
+    }
+]

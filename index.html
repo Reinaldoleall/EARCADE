@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Meu Arcade</title>
+    <link rel="stylesheet" href="css/netflix-style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho estilo Netflix -->
+    <header class="header">
+        <div class="header-left">
+            <h1 class="logo">🎮 MEU ARCADE</h1>
+        </div>
+        <nav class="header-right">
+            <span class="nav-item active">Início</span>
+            <span class="nav-item">Neo Geo</span>
+            <span class="nav-item">SNES</span>
+            <span class="nav-item">Mega Drive</span>
+        </nav>
+    </header>
+
+    <!-- Banner do Destaque -->
+    <section class="hero-banner" id="heroBanner">
+        <div class="hero-content">
+            <h2 id="heroTitle">Carregando...</h2>
+            <p id="heroDescription">Selecione um jogo para começar</p>
+            <button class="play-button" onclick="playFeatured()">▶ Assistir Agora</button>
+        </div>
+    </section>
+
+    <!-- Lista de Jogos (estilo Netflix rows) -->
+    <section class="game-rows">
+        <div class="row">
+            <h2 class="row-title">🎮 Todos os Jogos</h2>
+            <div class="row-posters" id="gameList">
+                <!-- Os jogos serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

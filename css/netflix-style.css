@@ -1,0 +1,226 @@
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #141414;
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header estilo Netflix */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, transparent 100%);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #e50914;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    color: #e5e5e5;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-item.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-item:hover {
+    color: #fff;
+}
+
+/* Hero Banner */
+.hero-banner {
+    position: relative;
+    height: 80vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://github.com/pajarorrojo/es-theme-PlayStation-X/raw/refs/heads/master/_theme_inc/images/background/neogeo.jpg');
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    margin-top: 0;
+}
+
+.hero-content {
+    max-width: 500px;
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.play-button {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.play-button:hover {
+    background: #f40612;
+}
+
+/* Rows de Jogos */
+.game-rows {
+    padding: 20px 40px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.row {
+    margin-bottom: 40px;
+}
+
+.row-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.row-posters {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+.row-posters::-webkit-scrollbar {
+    height: 8px;
+}
+
+.row-posters::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 4px;
+}
+
+.row-posters::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 4px;
+}
+
+/* Card do Jogo */
+.game-card {
+    flex: 0 0 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #2a2a2a;
+}
+
+.game-card:hover {
+    transform: scale(1.08);
+    z-index: 100;
+}
+
+.game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background-color: #000;
+}
+
+.game-card .game-info {
+    padding: 10px;
+}
+
+.game-card .game-title {
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.game-card .game-year {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Loader */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    color: #999;
+    font-size: 18px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .hero-banner {
+        height: 60vh;
+        padding: 0 20px;
+    }
+    
+    .hero-content h2 {
+        font-size: 28px;
+    }
+    
+    .game-rows {
+        padding: 10px 20px;
+    }
+    
+    .game-card {
+        flex: 0 0 150px;
+    }
+    
+    .game-card img {
+        height: 112px;
+    }
+}
