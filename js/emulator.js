@@ -14,7 +14,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function startEmulator(game) {
     try {
-        const romUrl = game.props.rom;
+        const rawUrl = game.props.rom;
+        
+        // Proxy Mágico para contornar o bloqueio de CORS do Archive.org
+        let romUrl = rawUrl;
+        if (rawUrl.includes('archive.org')) {
+            romUrl = 'https://corsproxy.io/?' + encodeURIComponent(rawUrl);
+        }
+        
         let core = getCoreName(game.type);
         
         // Gera um ID numérico obrigatório para o cache interno do EmulatorJS funcionar perfeitamente
