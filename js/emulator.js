@@ -86,22 +86,30 @@ function toggleFullscreen() {
     }
 }
 
-// Mapeador robusto de sistemas para as 'cores' do EmulatorJS
+// Mapeador robusto de sistemas para as 'cores' oficiais do EmulatorJS
 function getCoreName(type) {
     if (!type) return 'fbneo';
     const t = type.toLowerCase();
     
     if (t.includes('fbneo') || t.includes('neogeo') || t.includes('arcade')) return 'fbneo';
     if (t.includes('psx')) return 'pcsx_rearmed';
-    if (t.includes('pce') || t.includes('pcfx')) return 'pce_fast';
-    if (t === 'genesis' || t === 'sms' || t === 'gg' || t === 'sg1000') return 'genesis_plus_gx';
+    if (t === 'pce' || t === 'pcecd' || t === 'retro-pce-fast' || t === 'sgx') return 'mednafen_pce';
+    if (t === 'pcfx') return 'mednafen_pcfx';
+    if (t === 'ngp' || t === 'ngc') return 'mednafen_ngp';
+    if (t === 'ws' || t === 'wsc') return 'mednafen_wswan';
+    if (t === 'genesis' || t === 'megadrive' || t === 'gg' || t === 'sg1000') return 'genesis_plus_gx';
+    if (t === 'sms') return 'smsplus';
     if (t === 'snes') return 'snes9x';
     if (t === 'nes') return 'fceumm';
     if (t === 'n64') return 'mupen64plus_next';
     if (t === 'gba') return 'mgba';
     if (t === 'gb' || t === 'gbc') return 'gambatte';
-    if (t === '2600') return 'stella';
+    if (t === '2600') return 'stella2014';
     if (t === '7800') return 'prosystem';
+    if (t === 'coleco') return 'gearcoleco';
+    if (t === 'lnx') return 'handy';
+    if (t === 'vb') return 'beetle_vb';
+    if (t === 'commodore-c64') return 'vice_x64sc';
     
     return t.replace('-', '_');
 }
